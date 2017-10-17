@@ -4,7 +4,6 @@ let mong = require('mongoose');
 let bodyParser = require('body-parser');
 let app = express();
 app.use(bodyParser.json());
-require('./koneksidb/koneksidb.js');
 let verifyToken = require('./middleware/verifyToken');
 app.use('/', function ( req, res, next) {
     res.header("Access-Control-Allow-Origin","*");
@@ -16,7 +15,7 @@ app.use('/', function ( req, res, next) {
 // app.use('/api',loginRoute);
 let userPetugasRoute = require('./userPetugas/userPetugasRoute');
 app.use('/api',userPetugasRoute);
-
+mong.connect('mongodb://doni:h4g4t4doniozan@ds121345.mlab.com:21345/rumahsakit');
 app.listen(process.env.PORT || 8889, function() {
   console.log('Node app is running on port', app.get('port'));
 });
