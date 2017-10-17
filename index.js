@@ -17,4 +17,6 @@ app.use('/', function ( req, res, next) {
 let userPetugasRoute = require('./userPetugas/userPetugasRoute');
 app.use('/api',userPetugasRoute);
 
-app.listen(8889);
+app.listen(process.env.PORT || 8889, function() {
+  console.log('Node app is running on port', app.get('port'));
+});
