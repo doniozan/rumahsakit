@@ -19,6 +19,8 @@ let userPasienRoute = require('./userPasien/userPasienRoute');
 app.use('/api',userPasienRoute);
 let rumahSakitRoute = require('./rumahSakit/rumahSakitRoute');
 app.use('/api',rumahSakitRoute);
+let perawatRoute = require('./perawat/perawatRoute');
+app.use('/api',perawatRoute);
 let userPetugasRoute = require('./userPetugas/userPetugasRoute');
 app.use('/api',userPetugasRoute);
 mong.connect('mongodb://doni:h4g4t4doniozan@ds121345.mlab.com:21345/rumahsakit');
