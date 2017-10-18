@@ -13,6 +13,12 @@ app.use('/', function ( req, res, next) {
 });
 // let loginRoute = require('./login/loginRoute');
 // app.use('/api',loginRoute);
+let pasienRoute = require('./pasien/pasienRoute');
+app.use('/api',pasienRoute);
+let userPasienRoute = require('./userPasien/userPasienRoute');
+app.use('/api',userPasienRoute);
+let rumahSakitRoute = require('./rumahSakit/rumahSakitRoute');
+app.use('/api',rumahSakitRoute);
 let userPetugasRoute = require('./userPetugas/userPetugasRoute');
 app.use('/api',userPetugasRoute);
 mong.connect('mongodb://doni:h4g4t4doniozan@ds121345.mlab.com:21345/rumahsakit');
