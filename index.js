@@ -17,7 +17,7 @@ let pasienRoute = require('./pasien/pasienRoute');
 app.use('/api',pasienRoute);
 let userPasienRoute = require('./userPasien/userPasienRoute');
 app.use('/api',userPasienRoute);
-let rumahSakitRoute = require('./rumahSakit/rumahSakitRoute');
+let rumahSakitRoute = require('./rumahsakit/rumahSakitRoute');
 app.use('/api',rumahSakitRoute);
 let perawatRoute = require('./perawat/perawatRoute');
 app.use('/api',perawatRoute);
