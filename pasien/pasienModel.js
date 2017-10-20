@@ -6,9 +6,9 @@ let pasien = mong.Schema({
 	KdProvinsi:String,
 	KodePos:String,
 	TglLahir:String,
-	TungguBadan:String,
+	TinggiBadan:String,
 	BeratBadan:String,
 	StatusUkuranBadan:String,
-	NoTelp:String
+	NoTlp:String
 });
 let Pasien = module.exports = mong.model("Pasien",pasien,"Pasien");
