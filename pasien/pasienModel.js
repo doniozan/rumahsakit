@@ -9,6 +9,7 @@ let pasien = mong.Schema({
 	TinggiBadan:String,
 	BeratBadan:String,
 	StatusUkuranBadan:String,
-	NoTlp:String
+	NoTlp:String,
+	KeteranganTambah:String
 });
 let Pasien = module.exports = mong.model("Pasien",pasien,"Pasien");
