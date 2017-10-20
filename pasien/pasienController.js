@@ -4,7 +4,7 @@ module.exports.getPasien = function(callback,limit){
     Pasien.find(callback).limit(limit);
 }
 module.exports.getPasienById = function(_id,callback){
-    Pasien.findById(_id,callback);
+    Pasien.findByNamaPasien(_id,callback);
 }
 module.exports.createPasien = function(tk,callback){
     Pasien.create(tk,callback);
