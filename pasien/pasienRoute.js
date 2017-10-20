@@ -11,6 +11,15 @@ route.get('/pasien',function(req,res){
         res.json(respon);
     });
 });
+route.get('/namapasien/:_id',function(req,res){
+	let namapasien = req.params._id;
+    pasienController.getPasienByNamaPasien(id,function(err,respon){
+        if(err){
+            throw err;
+        }
+        res.json(respon);
+    });
+});
 route.get('/pasien/:_id',function(req,res){
 	let id = req.params._id;
     pasienController.getPasienById(id,function(err,respon){
