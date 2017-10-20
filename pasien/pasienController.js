@@ -3,7 +3,6 @@ Pasien = require('./pasienModel.js');
 module.exports.getPasien = function(callback,limit){
     Pasien.find(callback).limit(limit);
 }
-
 module.exports.getPasienByNamaPasien = function(_id,callback){
     Pasien.find({NamaPasien:_id},callback);
 }
