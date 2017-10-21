@@ -15,8 +15,8 @@ app.use('/', function ( req, res, next) {
 // app.use('/api',loginRoute);
 let pasienRoute = require('./pasien/pasienRoute');
 app.use('/api',pasienRoute);
-let angkatanRencanaRoute = require('./angkatanRencana/angkatanRencanaRoute');
-app.use('/api',angkatanRencanaRoute);
+let userPasienRoute = require('./userPasien/userPasienRoute');
+app.use('/api',userPasienRoute);
 let rumahsakitRoute = require('./rumahsakit/rumahsakitRoute');
 app.use('/api',rumahsakitRoute);
 let perawatRoute = require('./perawat/perawatRoute');
