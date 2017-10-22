@@ -11,10 +11,10 @@ app.use('/', function ( req, res, next) {
     res.header("Access-Control-Allow-Methods","GET, POST, OPTIONS, PUT, DELETE");    
     next();
 });
-// let loginRoute = require('./login/loginRoute');
-// app.use('/api',loginRoute);
+let loginRoute = require('./login/loginRoute');
+app.use('/api',loginRoute);
 let pasienRoute = require('./pasien/pasienRoute');
-app.use('/api',pasienRoute);
+app.use('/api',verifyToken,pasienRoute);
 let userPasienRoute = require('./userPasien/userPasienRoute');
 app.use('/api',userPasienRoute);
 let satuanHargaDokterRoute = require('./satuanHargaDokter/satuanHargaDokterRoute');
