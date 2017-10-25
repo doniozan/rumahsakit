@@ -14,7 +14,7 @@ app.use('/', function ( req, res, next) {
 let loginRoute = require('./perawat/loginRoute');
 app.use('/api',loginRoute);
 let pasienRoute = require('./pasien/pasienRoute');
-app.use('/api',pasienRoute);
+app.use('/api',verifyToken,pasienRoute);
 let userPasienRoute = require('./userPasien/userPasienRoute');
 app.use('/api',userPasienRoute);
 let satuanHargaDokterRoute = require('./satuanHargaDokter/satuanHargaDokterRoute');
